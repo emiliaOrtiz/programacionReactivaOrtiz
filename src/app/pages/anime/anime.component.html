@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header">
+      {{title}}
+    </div>
+    <div class="card-body">
+        <h3>PROBANDO EJEMPLO CON OBSERVABLE UTILIZANDO EL PIPE ASyNC</h3>
+        {{servicioBusqueda.numeros$|async}}
+        <h3>UTILIZANDO ACCESO A DATOS DESDE UNA API</h3>
+        <table class="table" *ngFor="let elem of servicioBusqueda.pokemones$|async|keyvalue">
+          <!--<b>{{elem.key}}</b>{{elem.value|json}}-->
+          <ul class="list-group">
+            <li class="list-group-item">{{elem.key}}</li>
+            <li class="list-group-item">{{elem.value|json}}
+            </li>
+          </ul>  
+        </table>
+          
+
+
+        
+        
+     
